@@ -3,506 +3,585 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Tafadzwa Muriritirwa — Senior Business Analyst</title>
-<meta name="description" content="Portfolio of Tafadzwa Muriritirwa — Senior Business Analyst and Data Analyst based in Moncton, NB, Canada."/>
+<title>Tafadzwa Muriritirwa — Business Analyst | Data Analyst</title>
+<meta name="description" content="Portfolio of Tafadzwa Muriritirwa — Business Analyst and Data Analyst. Open to remote opportunities."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
 <style>
-/* ── RESET & BASE ────────────────────────────────────────────────────── */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;font-size:16px}
+html{scroll-behavior:smooth}
 body{
-  font-family:'DM Sans',sans-serif;
-  background:#07111F;
-  color:#E8EDF5;
+  font-family:'Outfit',sans-serif;
+  background:#F5F2ED;
+  color:#1A1A1A;
   overflow-x:hidden;
   line-height:1.6;
 }
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
-ul{list-style:none}
 
-/* ── VARIABLES ───────────────────────────────────────────────────────── */
 :root{
-  --navy:    #1B3A6B;
-  --steel:   #2E6DA4;
-  --sky:     #5BA3D9;
-  --gold:    #E8A838;
-  --white:   #FFFFFF;
-  --off:     #E8EDF5;
-  --muted:   #8A9BB5;
-  --bg:      #07111F;
-  --bg2:     #0D1E35;
-  --bg3:     #112244;
-  --border:  rgba(46,109,164,0.25);
-  --glow:    rgba(46,109,164,0.15);
-  --radius:  12px;
-  --trans:   0.3s ease;
+  --ink:#1A1A1A;
+  --ink2:#3D3D3D;
+  --ink3:#6B6B6B;
+  --cream:#F5F2ED;
+  --cream2:#EDE9E3;
+  --cream3:#E4DED6;
+  --rust:#B85C38;
+  --rust2:#D4714A;
+  --slate:#2C3E50;
+  --border:#D4CFC8;
+  --white:#FFFFFF;
+  --radius:4px;
+  --trans:0.25s ease;
 }
 
-/* ── SCROLLBAR ───────────────────────────────────────────────────────── */
-::-webkit-scrollbar{width:6px}
-::-webkit-scrollbar-track{background:var(--bg)}
-::-webkit-scrollbar-thumb{background:var(--navy);border-radius:3px}
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:var(--cream)}
+::-webkit-scrollbar-thumb{background:var(--rust);border-radius:2px}
 
-/* ── NOISE OVERLAY ───────────────────────────────────────────────────── */
-body::before{
-  content:'';
-  position:fixed;inset:0;
-  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-  pointer-events:none;z-index:0;opacity:0.4;
-}
-
-/* ── NAV ─────────────────────────────────────────────────────────────── */
+/* NAV */
 nav{
   position:fixed;top:0;left:0;right:0;z-index:100;
-  padding:18px 5%;
+  padding:20px 6%;
   display:flex;align-items:center;justify-content:space-between;
-  background:rgba(7,17,31,0.85);
-  backdrop-filter:blur(16px);
+  background:rgba(245,242,237,0.92);
+  backdrop-filter:blur(12px);
   border-bottom:1px solid var(--border);
-  transition:var(--trans);
 }
 .nav-logo{
-  font-family:'Playfair Display',serif;
-  font-size:22px;font-weight:900;
-  color:var(--white);letter-spacing:-0.5px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:24px;font-weight:700;
+  letter-spacing:-0.5px;color:var(--ink);
 }
-.nav-logo span{color:var(--gold)}
-.nav-links{display:flex;gap:32px;align-items:center}
+.nav-logo em{color:var(--rust);font-style:normal}
+.nav-links{display:flex;gap:36px;align-items:center}
 .nav-links a{
-  font-family:'JetBrains Mono',monospace;
-  font-size:11px;letter-spacing:1.5px;
-  text-transform:uppercase;color:var(--muted);
+  font-size:13px;font-weight:500;
+  color:var(--ink3);letter-spacing:0.3px;
   transition:color var(--trans);
+  position:relative;
 }
-.nav-links a:hover{color:var(--gold)}
+.nav-links a::after{
+  content:'';position:absolute;bottom:-3px;left:0;right:0;
+  height:1px;background:var(--rust);
+  transform:scaleX(0);transition:transform var(--trans);transform-origin:left;
+}
+.nav-links a:hover{color:var(--rust)}
+.nav-links a:hover::after{transform:scaleX(1)}
 .nav-cta{
-  background:var(--steel);color:var(--white);
-  font-size:12px;font-weight:600;
-  padding:9px 20px;border-radius:6px;
-  transition:background var(--trans);
+  background:var(--rust)!important;color:var(--white)!important;
+  padding:9px 22px;border-radius:2px;font-weight:600!important;
+  font-size:13px!important;letter-spacing:0.5px;
 }
-.nav-cta:hover{background:var(--sky)}
-.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
-.hamburger span{display:block;width:22px;height:2px;background:var(--off);border-radius:2px;transition:var(--trans)}
+.nav-cta::after{display:none!important}
+.nav-cta:hover{background:var(--rust2)!important;color:var(--white)!important}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer}
+.hamburger span{display:block;width:22px;height:1.5px;background:var(--ink)}
 
-/* ── HERO ────────────────────────────────────────────────────────────── */
+/* HERO */
 #hero{
   min-height:100vh;
-  display:flex;align-items:center;
-  padding:120px 5% 80px;
-  position:relative;overflow:hidden;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+  padding:120px 6% 80px;
+  gap:60px;
+  background:var(--cream);
+  position:relative;
 }
-.hero-glow{
-  position:absolute;top:-200px;right:-200px;
-  width:700px;height:700px;
-  background:radial-gradient(circle,rgba(46,109,164,0.18) 0%,transparent 65%);
-  pointer-events:none;animation:pulse 6s ease-in-out infinite;
+.hero-bg-text{
+  position:absolute;
+  right:-2%;bottom:60px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(80px,14vw,180px);
+  font-weight:700;color:transparent;
+  -webkit-text-stroke:1px rgba(184,92,56,0.08);
+  white-space:nowrap;pointer-events:none;
+  user-select:none;line-height:1;
 }
-.hero-glow2{
-  position:absolute;bottom:-300px;left:-100px;
-  width:500px;height:500px;
-  background:radial-gradient(circle,rgba(232,168,56,0.06) 0%,transparent 65%);
-  pointer-events:none;animation:pulse 8s ease-in-out infinite reverse;
+.hero-left{position:relative;z-index:1}
+.hero-available{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(184,92,56,0.08);
+  border:1px solid rgba(184,92,56,0.2);
+  color:var(--rust);font-size:12px;font-weight:600;
+  padding:6px 16px;border-radius:100px;
+  margin-bottom:28px;letter-spacing:0.5px;
 }
-@keyframes pulse{0%,100%{transform:scale(1);opacity:0.7}50%{transform:scale(1.1);opacity:1}}
-
-.hero-inner{max-width:780px;position:relative;z-index:1}
-.hero-eyebrow{
-  font-family:'JetBrains Mono',monospace;
-  font-size:11px;letter-spacing:3px;
-  color:var(--gold);text-transform:uppercase;
-  margin-bottom:20px;
-  display:flex;align-items:center;gap:10px;
+.available-dot{
+  width:7px;height:7px;border-radius:50%;
+  background:var(--rust);
+  animation:blink 2s ease-in-out infinite;
+}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0.3}}
+.hero-name{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(44px,6vw,72px);
+  font-weight:700;line-height:1.0;
+  color:var(--ink);margin-bottom:16px;
+  letter-spacing:-1px;
+}
+.hero-name em{color:var(--rust);font-style:italic}
+.hero-role{
+  font-size:16px;font-weight:500;
+  color:var(--slate);letter-spacing:1px;
+  text-transform:uppercase;margin-bottom:24px;
+}
+.hero-divider{
+  width:48px;height:2px;
+  background:var(--rust);
+  margin-bottom:24px;
+}
+.hero-summary{
+  font-size:15.5px;color:var(--ink2);
+  line-height:1.85;margin-bottom:36px;
+  max-width:480px;
+}
+.hero-summary strong{color:var(--ink);font-weight:600}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+.btn-primary{
+  background:var(--rust);color:var(--white);
+  font-size:13px;font-weight:600;letter-spacing:0.5px;
+  padding:13px 28px;border-radius:2px;
+  transition:all var(--trans);
+  border:1px solid var(--rust);
+}
+.btn-primary:hover{background:var(--rust2);border-color:var(--rust2);transform:translateY(-1px)}
+.btn-outline{
+  background:transparent;color:var(--ink);
+  font-size:13px;font-weight:500;letter-spacing:0.3px;
+  padding:13px 28px;border-radius:2px;
+  border:1px solid var(--border);
+  transition:all var(--trans);
+}
+.btn-outline:hover{border-color:var(--rust);color:var(--rust)}
+.hero-right{
+  display:flex;flex-direction:column;gap:16px;
+  position:relative;z-index:1;
+}
+.hero-fact{
+  background:var(--white);
+  border:1px solid var(--border);
+  border-left:3px solid var(--rust);
+  border-radius:var(--radius);
+  padding:20px 24px;
   animation:fadeUp 0.8s ease both;
 }
-.hero-eyebrow::before{content:'';display:block;width:32px;height:1px;background:var(--gold)}
+.hero-fact:nth-child(2){animation-delay:0.1s}
+.hero-fact:nth-child(3){animation-delay:0.2s}
+.hero-fact:nth-child(4){animation-delay:0.3s}
+.hf-label{
+  font-size:10px;font-weight:600;letter-spacing:2px;
+  text-transform:uppercase;color:var(--ink3);
+  margin-bottom:5px;
+}
+.hf-value{
+  font-family:'Cormorant Garamond',serif;
+  font-size:18px;font-weight:600;color:var(--ink);
+  line-height:1.3;
+}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 
-.hero-name{
-  font-family:'Playfair Display',serif;
-  font-size:clamp(42px,7vw,80px);
-  font-weight:900;line-height:1.02;
-  color:var(--white);margin-bottom:12px;
-  animation:fadeUp 0.8s 0.1s ease both;
-}
-.hero-name .accent{color:var(--gold)}
-
-.hero-role{
-  font-size:clamp(16px,2.5vw,22px);
-  color:var(--sky);font-weight:500;
-  margin-bottom:24px;letter-spacing:0.3px;
-  animation:fadeUp 0.8s 0.2s ease both;
-}
-
-.hero-summary{
-  font-size:16px;color:var(--muted);
-  line-height:1.8;max-width:600px;
-  margin-bottom:36px;
-  animation:fadeUp 0.8s 0.3s ease both;
-}
-.hero-summary strong{color:var(--off)}
-
-.hero-badges{
-  display:flex;flex-wrap:wrap;gap:10px;
-  margin-bottom:40px;
-  animation:fadeUp 0.8s 0.4s ease both;
-}
-.badge{
-  display:flex;align-items:center;gap:7px;
-  background:rgba(27,58,107,0.4);
-  border:1px solid var(--border);
-  padding:8px 16px;border-radius:100px;
-  font-size:13px;color:var(--off);
-}
-.badge-dot{width:7px;height:7px;border-radius:50%;background:var(--gold);flex-shrink:0}
-
-.hero-ctas{
-  display:flex;gap:14px;flex-wrap:wrap;
-  animation:fadeUp 0.8s 0.5s ease both;
-}
-.btn-primary{
-  background:var(--steel);color:var(--white);
-  font-weight:600;font-size:14px;
-  padding:14px 28px;border-radius:8px;
-  border:none;cursor:pointer;
-  transition:all var(--trans);
-  display:inline-flex;align-items:center;gap:8px;
-}
-.btn-primary:hover{background:var(--sky);transform:translateY(-2px);box-shadow:0 8px 24px rgba(46,109,164,0.35)}
-.btn-outline{
-  background:transparent;color:var(--off);
-  font-weight:500;font-size:14px;
-  padding:14px 28px;border-radius:8px;
-  border:1px solid rgba(255,255,255,0.18);
-  cursor:pointer;transition:all var(--trans);
-  display:inline-flex;align-items:center;gap:8px;
-}
-.btn-outline:hover{border-color:var(--sky);color:var(--sky);transform:translateY(-2px)}
-
-.hero-stats{
-  position:absolute;right:5%;bottom:80px;
-  display:flex;flex-direction:column;gap:20px;
-  animation:fadeUp 1s 0.6s ease both;
-}
-.stat-card{
-  background:var(--bg2);border:1px solid var(--border);
-  border-radius:var(--radius);padding:18px 22px;
-  text-align:center;min-width:110px;
-}
-.stat-num{
-  font-family:'Playfair Display',serif;
-  font-size:30px;font-weight:700;
-  color:var(--gold);line-height:1;margin-bottom:4px;
-}
-.stat-label{font-size:11px;color:var(--muted);letter-spacing:0.5px}
-
-@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
-
-/* ── SECTION COMMON ─────────────────────────────────────────────────── */
-section{padding:90px 5%;position:relative;z-index:1}
-section:nth-child(even){background:var(--bg2)}
-.section-label{
-  font-family:'JetBrains Mono',monospace;
+/* SECTIONS */
+section{padding:88px 6%;position:relative}
+section:nth-child(even){background:var(--cream2)}
+.sec-eyebrow{
+  font-family:'Space Mono',monospace;
   font-size:10px;letter-spacing:3px;
-  color:var(--gold);text-transform:uppercase;
+  color:var(--rust);text-transform:uppercase;
   margin-bottom:12px;
-  display:flex;align-items:center;gap:10px;
 }
-.section-label::before{content:'//'}
-.section-title{
-  font-family:'Playfair Display',serif;
-  font-size:clamp(28px,4vw,42px);
-  font-weight:900;color:var(--white);
-  line-height:1.1;margin-bottom:16px;
+.sec-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(30px,4vw,46px);
+  font-weight:700;color:var(--ink);
+  line-height:1.1;margin-bottom:14px;
+  letter-spacing:-0.5px;
 }
-.section-sub{font-size:16px;color:var(--muted);max-width:560px;line-height:1.7;margin-bottom:56px}
-.section-rule{width:48px;height:3px;background:var(--gold);border-radius:2px;margin-bottom:56px}
+.sec-sub{
+  font-size:15px;color:var(--ink3);
+  max-width:540px;line-height:1.75;
+  margin-bottom:52px;
+}
+.sec-rule{
+  width:40px;height:2px;
+  background:var(--rust);
+  margin-bottom:52px;
+}
 
-/* ── COMPETENCIES ────────────────────────────────────────────────────── */
-#competencies .grid{
+/* ABOUT / VALUE STRIP */
+#value{
+  background:var(--slate);
+  padding:56px 6%;
+}
+.value-inner{
   display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
-  gap:20px;
+  grid-template-columns:1fr 1fr 1fr 1fr;
+  gap:2px;
+}
+.value-item{
+  background:rgba(255,255,255,0.04);
+  padding:32px 28px;
+  border-right:1px solid rgba(255,255,255,0.08);
+  transition:background var(--trans);
+}
+.value-item:last-child{border-right:none}
+.value-item:hover{background:rgba(184,92,56,0.15)}
+.vi-icon{font-size:24px;margin-bottom:14px}
+.vi-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:18px;font-weight:600;
+  color:#FFFFFF;margin-bottom:8px;
+}
+.vi-desc{font-size:13px;color:rgba(255,255,255,0.55);line-height:1.7}
+
+/* COMPETENCIES */
+#competencies .comp-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+  gap:2px;
+  border:1px solid var(--border);
 }
 .comp-card{
-  background:var(--bg3);border:1px solid var(--border);
-  border-radius:var(--radius);padding:24px;
-  transition:all var(--trans);cursor:default;
+  background:var(--white);
+  padding:32px;
+  transition:all var(--trans);
+  border-right:1px solid var(--border);
+  border-bottom:1px solid var(--border);
 }
-.comp-card:hover{border-color:var(--steel);transform:translateY(-4px);box-shadow:0 12px 32px var(--glow)}
-.comp-icon{font-size:26px;margin-bottom:14px}
-.comp-title{font-size:15px;font-weight:600;color:var(--white);margin-bottom:8px}
-.comp-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.comp-card:hover{background:var(--cream);transform:none}
+.comp-card:hover .comp-num{color:var(--rust)}
+.comp-num{
+  font-family:'Space Mono',monospace;
+  font-size:11px;color:var(--border);
+  margin-bottom:16px;transition:color var(--trans);
+  letter-spacing:1px;
+}
+.comp-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:20px;font-weight:700;color:var(--ink);
+  margin-bottom:10px;
+}
+.comp-desc{font-size:13.5px;color:var(--ink3);line-height:1.7;margin-bottom:16px}
+.comp-tags{display:flex;flex-wrap:wrap;gap:6px}
 .comp-tag{
-  font-family:'JetBrains Mono',monospace;
-  font-size:10px;letter-spacing:0.5px;
-  background:rgba(46,109,164,0.15);
-  border:1px solid rgba(46,109,164,0.3);
-  color:var(--sky);padding:4px 10px;border-radius:4px;
+  font-size:11px;font-weight:500;
+  background:var(--cream2);
+  border:1px solid var(--border);
+  color:var(--ink2);
+  padding:4px 12px;border-radius:2px;
+  letter-spacing:0.2px;
 }
 
-/* ── EXPERIENCE TIMELINE ─────────────────────────────────────────────── */
-#experience .timeline{position:relative;padding-left:32px}
+/* EXPERIENCE */
+#experience .timeline{
+  position:relative;
+  padding-left:28px;
+  max-width:860px;
+}
 #experience .timeline::before{
   content:'';position:absolute;left:0;top:8px;bottom:0;
-  width:2px;background:linear-gradient(to bottom,var(--steel),transparent);
+  width:1px;background:var(--border);
 }
-.tl-item{position:relative;margin-bottom:52px}
+.tl-item{
+  position:relative;margin-bottom:56px;
+}
 .tl-dot{
-  position:absolute;left:-39px;top:6px;
-  width:14px;height:14px;border-radius:50%;
-  background:var(--gold);border:3px solid var(--bg);
-  box-shadow:0 0 0 3px var(--gold);
+  position:absolute;left:-32px;top:8px;
+  width:9px;height:9px;border-radius:50%;
+  background:var(--rust);
+  box-shadow:0 0 0 3px var(--cream2);
 }
-.tl-dot.steel{background:var(--steel);box-shadow:0 0 0 3px var(--steel)}
-.tl-header{margin-bottom:12px}
+.tl-dot.secondary{background:var(--slate)}
 .tl-date{
-  font-family:'JetBrains Mono',monospace;
+  font-family:'Space Mono',monospace;
   font-size:10px;letter-spacing:2px;
-  color:var(--gold);text-transform:uppercase;margin-bottom:6px;
+  color:var(--rust);text-transform:uppercase;
+  margin-bottom:7px;
 }
 .tl-title{
-  font-family:'Playfair Display',serif;
-  font-size:20px;font-weight:700;color:var(--white);
-  margin-bottom:2px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:22px;font-weight:700;color:var(--ink);
+  margin-bottom:3px;
 }
-.tl-org{font-size:14px;color:var(--sky);font-weight:500}
+.tl-org{font-size:14px;color:var(--slate);font-weight:500;margin-bottom:8px}
 .tl-badge{
-  display:inline-block;margin-top:6px;
-  background:rgba(232,168,56,0.12);
-  border:1px solid rgba(232,168,56,0.3);
-  color:var(--gold);font-size:11px;font-weight:600;
-  padding:3px 12px;border-radius:100px;
+  display:inline-block;margin-bottom:14px;
+  background:rgba(184,92,56,0.08);
+  border:1px solid rgba(184,92,56,0.2);
+  color:var(--rust);font-size:11px;font-weight:600;
+  padding:3px 12px;border-radius:100px;letter-spacing:0.3px;
 }
-.tl-desc{
-  font-size:14px;color:var(--muted);line-height:1.7;
-  margin-bottom:14px;max-width:680px;
-}
+.tl-desc{font-size:14px;color:var(--ink3);line-height:1.75;margin-bottom:14px;max-width:680px}
 .tl-bullets{display:flex;flex-direction:column;gap:8px;max-width:700px}
 .tl-bullet{
   display:flex;gap:12px;align-items:flex-start;
-  font-size:14px;color:var(--off);line-height:1.6;
+  font-size:14px;color:var(--ink2);line-height:1.65;
 }
 .tl-bullet::before{
-  content:'→';color:var(--steel);flex-shrink:0;
-  font-size:13px;margin-top:1px;font-weight:600;
+  content:'—';color:var(--rust);flex-shrink:0;
+  font-size:12px;margin-top:2px;
 }
 
-/* ── PROJECTS ─────────────────────────────────────────────────────────── */
-#projects .proj-grid{
+/* PROJECTS */
+#projects{background:var(--cream)}
+.proj-intro{
+  display:grid;grid-template-columns:1fr 1fr;gap:48px;
+  align-items:end;margin-bottom:52px;
+}
+.proj-intro-right{
+  font-size:14px;color:var(--ink3);line-height:1.8;
+  border-left:2px solid var(--rust);
+  padding-left:20px;
+}
+.proj-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(340px,1fr));
-  gap:28px;
+  grid-template-columns:repeat(auto-fill,minmax(360px,1fr));
+  gap:2px;
 }
 .proj-card{
-  background:var(--bg3);border:1px solid var(--border);
-  border-radius:var(--radius);overflow:hidden;
-  transition:all var(--trans);display:flex;flex-direction:column;
+  background:var(--white);
+  padding:36px;
+  border:1px solid var(--border);
+  display:flex;flex-direction:column;
+  transition:all var(--trans);
+  position:relative;overflow:hidden;
 }
-.proj-card:hover{border-color:var(--steel);transform:translateY(-6px);box-shadow:0 20px 48px rgba(0,0,0,0.4)}
-.proj-header{
-  padding:28px 28px 20px;
-  border-bottom:1px solid var(--border);
-  background:linear-gradient(135deg,rgba(27,58,107,0.4),transparent);
+.proj-card::before{
+  content:'';
+  position:absolute;top:0;left:0;right:0;height:3px;
+  background:var(--rust);
+  transform:scaleX(0);transform-origin:left;
+  transition:transform 0.3s ease;
 }
-.proj-num{
-  font-family:'JetBrains Mono',monospace;
-  font-size:11px;letter-spacing:2px;
-  color:var(--gold);margin-bottom:10px;
+.proj-card:hover::before{transform:scaleX(1)}
+.proj-card:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(0,0,0,0.08)}
+.proj-label{
+  font-family:'Space Mono',monospace;
+  font-size:10px;letter-spacing:2px;
+  color:var(--rust);text-transform:uppercase;
+  margin-bottom:14px;
 }
 .proj-title{
-  font-family:'Playfair Display',serif;
-  font-size:20px;font-weight:700;color:var(--white);
+  font-family:'Cormorant Garamond',serif;
+  font-size:22px;font-weight:700;color:var(--ink);
   margin-bottom:6px;line-height:1.2;
 }
-.proj-org{font-size:12px;color:var(--sky);font-weight:500;letter-spacing:0.3px}
-.proj-body{padding:24px 28px;flex:1}
-.proj-desc{font-size:14px;color:var(--muted);line-height:1.75;margin-bottom:16px}
-.proj-highlights{display:flex;flex-direction:column;gap:7px;margin-bottom:20px}
-.proj-hl{
-  display:flex;gap:10px;align-items:flex-start;
-  font-size:13px;color:var(--off);line-height:1.5;
+.proj-org{font-size:12px;color:var(--ink3);font-weight:500;margin-bottom:16px;letter-spacing:0.3px}
+.proj-desc{font-size:14px;color:var(--ink2);line-height:1.75;margin-bottom:18px;flex:1}
+.proj-outcomes{
+  background:var(--cream2);
+  border-left:2px solid var(--rust);
+  padding:14px 16px;margin-bottom:18px;
 }
-.proj-hl::before{content:'▸';color:var(--gold);flex-shrink:0;font-size:11px;margin-top:2px}
-.proj-pills{display:flex;flex-wrap:wrap;gap:6px}
+.proj-outcomes-title{
+  font-size:10px;font-weight:700;letter-spacing:2px;
+  text-transform:uppercase;color:var(--rust);
+  margin-bottom:8px;
+}
+.proj-outcome{
+  display:flex;gap:10px;font-size:13px;color:var(--ink2);
+  line-height:1.55;margin-bottom:5px;
+}
+.proj-outcome::before{content:'→';color:var(--rust);flex-shrink:0;font-weight:700}
+.proj-pills{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px}
 .proj-pill{
-  font-family:'JetBrains Mono',monospace;font-size:10px;
-  letter-spacing:0.4px;
-  background:rgba(91,163,217,0.1);
-  border:1px solid rgba(91,163,217,0.25);
-  color:var(--sky);padding:4px 10px;border-radius:4px;
+  font-size:11px;font-weight:500;
+  background:var(--cream2);border:1px solid var(--border);
+  color:var(--ink2);padding:4px 12px;border-radius:2px;
 }
 .proj-footer{
-  padding:16px 28px;
-  border-top:1px solid var(--border);
-  display:flex;justify-content:flex-end;
+  display:flex;justify-content:space-between;
+  align-items:center;
+  padding-top:16px;border-top:1px solid var(--border);
 }
+.proj-type{font-size:11px;color:var(--ink3);letter-spacing:0.5px;text-transform:uppercase}
 .proj-link{
-  font-size:12px;font-weight:600;color:var(--sky);
-  display:flex;align-items:center;gap:6px;
-  transition:color var(--trans);
+  font-size:12px;font-weight:600;color:var(--rust);
+  display:flex;align-items:center;gap:5px;
+  transition:gap var(--trans);
 }
-.proj-link:hover{color:var(--gold)}
+.proj-link:hover{gap:9px}
 
-/* ── EDUCATION ────────────────────────────────────────────────────────── */
+/* SKILLS */
+#skills{background:var(--white)}
+.skills-layout{
+  display:grid;
+  grid-template-columns:1fr 2fr;
+  gap:60px;align-items:start;
+}
+.skills-intro p{
+  font-size:14px;color:var(--ink3);line-height:1.8;
+  margin-bottom:20px;
+}
+.skills-note{
+  background:var(--cream2);border-left:2px solid var(--rust);
+  padding:16px 18px;font-size:13px;color:var(--ink2);line-height:1.65;
+}
+.skills-cols{
+  display:grid;grid-template-columns:1fr 1fr;gap:40px;
+}
+.skill-group{margin-bottom:32px}
+.skill-group-title{
+  font-family:'Space Mono',monospace;
+  font-size:10px;letter-spacing:3px;
+  color:var(--rust);text-transform:uppercase;
+  margin-bottom:16px;padding-bottom:10px;
+  border-bottom:1px solid var(--border);
+}
+.skill-item{
+  display:flex;align-items:center;gap:10px;
+  margin-bottom:10px;font-size:14px;color:var(--ink2);
+}
+.skill-item::before{
+  content:'';width:6px;height:6px;border-radius:50%;
+  background:var(--rust);flex-shrink:0;
+  opacity:0.7;
+}
+
+/* EDUCATION */
 #education .edu-grid{
-  display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
-  gap:24px;
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+  gap:2px;
 }
 .edu-card{
-  background:var(--bg3);border:1px solid var(--border);
-  border-radius:var(--radius);padding:28px;
+  background:var(--white);
+  border:1px solid var(--border);
+  padding:32px;
   transition:all var(--trans);
+  position:relative;
 }
-.edu-card:hover{border-color:var(--steel);transform:translateY(-3px)}
+.edu-card::after{
+  content:'';position:absolute;bottom:0;left:0;right:0;height:2px;
+  background:var(--rust);transform:scaleX(0);transform-origin:left;
+  transition:transform 0.3s ease;
+}
+.edu-card:hover::after{transform:scaleX(1)}
 .edu-year{
-  font-family:'JetBrains Mono',monospace;
+  font-family:'Space Mono',monospace;
   font-size:10px;letter-spacing:2px;
-  color:var(--gold);margin-bottom:10px;
+  color:var(--rust);margin-bottom:12px;
 }
 .edu-degree{
-  font-family:'Playfair Display',serif;
-  font-size:16px;font-weight:700;color:var(--white);
-  margin-bottom:4px;line-height:1.3;
+  font-family:'Cormorant Garamond',serif;
+  font-size:18px;font-weight:700;color:var(--ink);
+  margin-bottom:5px;line-height:1.3;
 }
-.edu-school{font-size:13px;color:var(--sky);margin-bottom:14px;font-weight:500}
-.edu-detail{font-size:13px;color:var(--muted);line-height:1.65}
+.edu-school{font-size:13px;color:var(--slate);font-weight:500;margin-bottom:14px}
+.edu-detail{font-size:13px;color:var(--ink3);line-height:1.65}
 
-/* ── CERTIFICATIONS ───────────────────────────────────────────────────── */
-#certifications .cert-grid{
-  display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
-  gap:16px;
+/* CERTIFICATIONS */
+#certifications{background:var(--cream2)}
+.cert-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+  gap:2px;
 }
 .cert-card{
-  background:var(--bg3);border:1px solid var(--border);
-  border-radius:10px;padding:20px 22px;
-  display:flex;gap:16px;align-items:flex-start;
+  background:var(--white);
+  border:1px solid var(--border);
+  padding:22px 24px;
+  display:flex;gap:14px;align-items:flex-start;
   transition:all var(--trans);
 }
-.cert-card:hover{border-color:var(--steel);transform:translateY(-2px)}
+.cert-card:hover{background:var(--cream);border-color:var(--rust)}
 .cert-icon{
-  font-size:24px;flex-shrink:0;
-  width:44px;height:44px;border-radius:8px;
-  background:rgba(232,168,56,0.1);border:1px solid rgba(232,168,56,0.2);
+  width:40px;height:40px;border-radius:2px;
+  background:rgba(184,92,56,0.08);
+  border:1px solid rgba(184,92,56,0.15);
   display:flex;align-items:center;justify-content:center;
+  font-size:18px;flex-shrink:0;
 }
-.cert-name{font-size:13.5px;font-weight:600;color:var(--white);margin-bottom:3px;line-height:1.3}
-.cert-issuer{font-size:12px;color:var(--muted)}
+.cert-name{font-size:13.5px;font-weight:600;color:var(--ink);margin-bottom:3px;line-height:1.3}
+.cert-issuer{font-size:12px;color:var(--ink3)}
 .cert-date{
-  font-family:'JetBrains Mono',monospace;
-  font-size:10px;color:var(--gold);margin-top:5px;letter-spacing:0.5px;
+  font-family:'Space Mono',monospace;
+  font-size:10px;color:var(--rust);
+  margin-top:4px;letter-spacing:0.5px;
 }
 
-/* ── SKILLS BAR ──────────────────────────────────────────────────────── */
-#skills .skills-grid{
-  display:grid;grid-template-columns:1fr 1fr;gap:12px 48px;
+/* CONTACT */
+#contact{background:var(--slate)}
+.contact-inner{max-width:720px}
+.contact-inner .sec-eyebrow{color:rgba(255,255,255,0.5)}
+.contact-inner .sec-title{color:#FFFFFF}
+.contact-inner .sec-rule{background:rgba(184,92,56,0.7)}
+.contact-inner p{font-size:15px;color:rgba(255,255,255,0.65);line-height:1.8;margin-bottom:40px}
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:2px;
 }
-.skill-row{margin-bottom:8px}
-.skill-head{
-  display:flex;justify-content:space-between;align-items:center;
-  margin-bottom:6px;
-}
-.skill-name{font-size:13px;color:var(--off);font-weight:500}
-.skill-pct{
-  font-family:'JetBrains Mono',monospace;
-  font-size:11px;color:var(--gold);
-}
-.skill-track{
-  height:4px;background:rgba(255,255,255,0.07);
-  border-radius:2px;overflow:hidden;
-}
-.skill-fill{
-  height:100%;border-radius:2px;
-  background:linear-gradient(90deg,var(--navy),var(--sky));
-  transition:width 1.2s cubic-bezier(0.4,0,0.2,1);
-}
-
-/* ── CONTACT ─────────────────────────────────────────────────────────── */
-#contact{background:var(--bg)}
-.contact-inner{
-  max-width:700px;margin:0 auto;
-  text-align:center;
-}
-.contact-inner .section-label{justify-content:center}
-.contact-inner .section-rule{margin:0 auto 48px}
-.contact-links{
-  display:flex;flex-wrap:wrap;gap:16px;
-  justify-content:center;margin-top:40px;
-}
-.contact-link{
-  display:flex;align-items:center;gap:10px;
-  background:var(--bg3);border:1px solid var(--border);
-  border-radius:10px;padding:16px 24px;
-  font-size:14px;color:var(--off);font-weight:500;
+.contact-item{
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.08);
+  padding:20px 24px;
+  display:flex;align-items:center;gap:14px;
   transition:all var(--trans);
 }
-.contact-link:hover{border-color:var(--steel);color:var(--sky);transform:translateY(-2px)}
-.contact-link-icon{font-size:18px}
+.contact-item:hover{background:rgba(184,92,56,0.2);border-color:rgba(184,92,56,0.4)}
+.contact-icon{font-size:20px}
+.contact-label{font-size:11px;color:rgba(255,255,255,0.4);margin-bottom:2px;letter-spacing:0.5px;text-transform:uppercase}
+.contact-value{font-size:14px;color:#FFFFFF;font-weight:500}
 
-/* ── FOOTER ──────────────────────────────────────────────────────────── */
+/* FOOTER */
 footer{
-  background:var(--bg);
-  border-top:1px solid var(--border);
-  padding:28px 5%;
+  background:var(--ink);
+  padding:28px 6%;
   display:flex;align-items:center;justify-content:space-between;
   flex-wrap:wrap;gap:12px;
 }
 .footer-left{
-  font-family:'Playfair Display',serif;
-  font-size:18px;font-weight:700;color:var(--white);
+  font-family:'Cormorant Garamond',serif;
+  font-size:18px;font-weight:700;color:#FFFFFF;
 }
-.footer-left span{color:var(--gold)}
-.footer-right{font-size:12px;color:var(--muted)}
+.footer-left em{color:var(--rust);font-style:normal}
+.footer-right{font-size:12px;color:rgba(255,255,255,0.35);letter-spacing:0.3px}
 
-/* ── AVAILABLE BANNER ─────────────────────────────────────────────────── */
-.available-banner{
-  display:inline-flex;align-items:center;gap:10px;
-  background:rgba(46,164,79,0.1);border:1px solid rgba(46,164,79,0.3);
-  color:#4CAF72;font-size:13px;font-weight:600;
-  padding:8px 18px;border-radius:100px;margin-bottom:28px;
-}
-.available-dot{
-  width:8px;height:8px;border-radius:50%;background:#4CAF72;
-  animation:blink 2s ease-in-out infinite;
-}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:0.3}}
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity 0.65s ease,transform 0.65s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
 
-/* ── RESPONSIVE ──────────────────────────────────────────────────────── */
-@media(max-width:900px){
-  .hero-stats{display:none}
-  #skills .skills-grid{grid-template-columns:1fr}
+/* RESPONSIVE */
+@media(max-width:960px){
+  #hero{grid-template-columns:1fr}
+  .hero-right{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .value-inner{grid-template-columns:1fr 1fr}
+  .skills-layout{grid-template-columns:1fr}
+  .proj-intro{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+}
+@media(max-width:700px){
   .nav-links{display:none}
   .hamburger{display:flex}
   nav.open .nav-links{
-    display:flex;flex-direction:column;gap:20px;
+    display:flex;flex-direction:column;gap:18px;
     position:absolute;top:100%;left:0;right:0;
-    background:rgba(7,17,31,0.97);
-    padding:24px 5%;border-bottom:1px solid var(--border);
+    background:rgba(245,242,237,0.98);
+    padding:24px 6%;border-bottom:1px solid var(--border);
   }
+  .hero-right{grid-template-columns:1fr}
+  .value-inner{grid-template-columns:1fr}
+  .skills-cols{grid-template-columns:1fr}
+  section{padding:64px 6%}
+  .proj-grid{grid-template-columns:1fr}
 }
-@media(max-width:600px){
-  section{padding:64px 5%}
-  .proj-grid{grid-template-columns:1fr !important}
-}
-
-/* ── SCROLL REVEAL ───────────────────────────────────────────────────── */
-.reveal{opacity:0;transform:translateY(30px);transition:opacity 0.7s ease,transform 0.7s ease}
-.reveal.visible{opacity:1;transform:translateY(0)}
 </style>
 </head>
 <body>
 
-<!-- ── NAV ──────────────────────────────────────────────────────────────── -->
+<!-- NAV -->
 <nav id="navbar">
-  <div class="nav-logo">T.<span>M</span></div>
+  <div class="nav-logo">T.<em>M</em></div>
   <ul class="nav-links">
     <li><a href="#competencies">Competencies</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
     <li><a href="#education">Education</a></li>
-    <li><a href="#certifications">Certifications</a></li>
     <li><a href="#contact" class="nav-cta">Contact</a></li>
   </ul>
   <div class="hamburger" id="hamburger">
@@ -510,72 +589,96 @@ footer{
   </div>
 </nav>
 
-<!-- ── HERO ─────────────────────────────────────────────────────────────── -->
+<!-- HERO -->
 <section id="hero">
-  <div class="hero-glow"></div>
-  <div class="hero-glow2"></div>
-  <div class="hero-inner">
-    <div class="available-banner">
+  <div class="hero-bg-text">DATA</div>
+  <div class="hero-left">
+    <div class="hero-available">
       <div class="available-dot"></div>
-      Available for Senior BA roles in New Brunswick
+      Available — Open to Remote Opportunities
     </div>
-    <div class="hero-eyebrow">Business Analyst · Data Analyst · Moncton, NB, Canada</div>
-    <h1 class="hero-name">Tafadzwa<br><span class="accent">Muriritirwa</span></h1>
-    <p class="hero-role">Senior Business Analyst &amp; Data Analyst</p>
+    <h1 class="hero-name">Tafadzwa<br><em>Muriritirwa</em></h1>
+    <p class="hero-role">Business Analyst &nbsp;|&nbsp; Data Analyst</p>
+    <div class="hero-divider"></div>
     <p class="hero-summary">
-      <strong>5+ years at Huawei Technologies</strong> (Fortune Global 500) · <strong>GNB Health Data Analytics</strong> internship · <strong>Post-Graduate Diploma</strong> in IT Business &amp; Advanced Analytics at NBCC. I bridge business needs and technology — from requirements elicitation to data-driven recommendations — with enterprise rigour and a collaborative mindset.
+      <strong>5+ years at Huawei Technologies</strong> (Fortune Global 500) · <strong>GNB Health Data Analytics</strong> internship · Post-Graduate Diploma in IT Business &amp; Advanced Analytics at NBCC.<br><br>
+      I turn complex data and business problems into clear decisions — applying CRISP-DM, stakeholder analysis, Python, SQL, and Power BI with enterprise-grade rigour.
     </p>
-    <div class="hero-badges">
-      <div class="badge"><div class="badge-dot"></div>Requirements Elicitation</div>
-      <div class="badge"><div class="badge-dot"></div>CRISP-DM · Agile</div>
-      <div class="badge"><div class="badge-dot"></div>Python · SQL · Power BI</div>
-      <div class="badge"><div class="badge-dot"></div>Stakeholder Management</div>
-      <div class="badge"><div class="badge-dot"></div>GNB Environment</div>
-    </div>
     <div class="hero-ctas">
       <a href="#projects" class="btn-primary">View My Work →</a>
       <a href="mailto:t.muriri@live.co.uk" class="btn-outline">Get In Touch</a>
     </div>
   </div>
-  <div class="hero-stats">
-    <div class="stat-card">
-      <div class="stat-num">5+</div>
-      <div class="stat-label">Years<br>Fortune 500</div>
+  <div class="hero-right">
+    <div class="hero-fact">
+      <div class="hf-label">Enterprise Experience</div>
+      <div class="hf-value">5+ Years · Huawei Fortune Global 500</div>
     </div>
-    <div class="stat-card">
-      <div class="stat-num">15K+</div>
-      <div class="stat-label">Records<br>Analysed</div>
+    <div class="hero-fact">
+      <div class="hf-label">Government Experience</div>
+      <div class="hf-value">GNB Health — Data Analytics Intern</div>
     </div>
-    <div class="stat-card">
-      <div class="stat-num">GNB</div>
-      <div class="stat-label">Health<br>Intern</div>
+    <div class="hero-fact">
+      <div class="hf-label">Currently Completing</div>
+      <div class="hf-value">Post-Grad Diploma · NBCC · BAA Program</div>
+    </div>
+    <div class="hero-fact">
+      <div class="hf-label">Recognition</div>
+      <div class="hf-value">1 of 100 Selected · Study &amp; Succeed NB</div>
     </div>
   </div>
 </section>
 
-<!-- ── COMPETENCIES ──────────────────────────────────────────────────────── -->
+<!-- VALUE STRIP -->
+<div id="value">
+  <div class="value-inner">
+    <div class="value-item">
+      <div class="vi-icon">🔍</div>
+      <div class="vi-title">I find what matters in data</div>
+      <div class="vi-desc">From 15,000+ cardiac records to government health datasets — I surface the insights that drive real decisions.</div>
+    </div>
+    <div class="value-item">
+      <div class="vi-icon">🤝</div>
+      <div class="vi-title">I bridge business and technology</div>
+      <div class="vi-desc">5 years translating C-suite needs into working solutions at Fortune 500 scale — now applied to analytics.</div>
+    </div>
+    <div class="value-item">
+      <div class="vi-icon">🏛</div>
+      <div class="vi-title">I know GNB's environment</div>
+      <div class="vi-desc">Direct internship experience inside GNB Health — Agile, Microsoft DevOps, and government IT standards.</div>
+    </div>
+    <div class="value-item">
+      <div class="vi-icon">📐</div>
+      <div class="vi-title">I apply full methodology</div>
+      <div class="vi-desc">CRISP-DM, BABOK, SDLC — not just tools, but structured thinking from problem definition to recommendation.</div>
+    </div>
+  </div>
+</div>
+
+<!-- COMPETENCIES -->
 <section id="competencies">
-  <div class="section-label">Core Competencies</div>
-  <h2 class="section-title">What I Bring<br>to the Table</h2>
-  <div class="section-rule"></div>
-  <div class="grid reveal">
+  <div class="sec-eyebrow">Core Competencies</div>
+  <h2 class="sec-title">What I Bring<br>to the Table</h2>
+  <div class="sec-rule"></div>
+  <div class="comp-grid reveal">
     <div class="comp-card">
-      <div class="comp-icon">🔍</div>
+      <div class="comp-num">01</div>
       <div class="comp-title">Business Analysis</div>
-      <p style="font-size:13px;color:var(--muted);line-height:1.65">Eliciting, analyzing, and documenting functional and non-functional requirements. Gap analysis, As-Is/To-Be process mapping, business case development.</p>
+      <p class="comp-desc">Eliciting, analyzing, and documenting functional and non-functional requirements. Gap analysis, As-Is/To-Be process mapping, business case development, and stakeholder workshop facilitation.</p>
       <div class="comp-tags">
         <span class="comp-tag">BABOK</span>
         <span class="comp-tag">Gap Analysis</span>
         <span class="comp-tag">BRD / FRD</span>
         <span class="comp-tag">Use Cases</span>
+        <span class="comp-tag">Process Mapping</span>
       </div>
     </div>
     <div class="comp-card">
-      <div class="comp-icon">📊</div>
+      <div class="comp-num">02</div>
       <div class="comp-title">Data Analysis &amp; Visualization</div>
-      <p style="font-size:13px;color:var(--muted);line-height:1.65">Statistical analysis, bivariate/multivariate modelling, and stakeholder-ready dashboards. Applied across real-world health and enterprise datasets.</p>
+      <p class="comp-desc">Statistical analysis, bivariate and multivariate modelling, and executive-ready dashboards. Applied to real healthcare and enterprise datasets using Python, SQL, and Power BI.</p>
       <div class="comp-tags">
-        <span class="comp-tag">Python</span>
+        <span class="comp-tag">Python · Pandas · NumPy</span>
         <span class="comp-tag">SQL</span>
         <span class="comp-tag">Power BI</span>
         <span class="comp-tag">R</span>
@@ -583,261 +686,276 @@ footer{
       </div>
     </div>
     <div class="comp-card">
-      <div class="comp-icon">🔄</div>
+      <div class="comp-num">03</div>
       <div class="comp-title">Agile &amp; Project Delivery</div>
-      <p style="font-size:13px;color:var(--muted);line-height:1.65">Sprint-based project management using Microsoft DevOps within GNB's health environment. 5 years managing enterprise solution delivery at Huawei.</p>
+      <p class="comp-desc">Sprint-based delivery using Microsoft DevOps within GNB's health environment. Five years managing enterprise solution lifecycles at Huawei — from requirements to post-implementation support.</p>
       <div class="comp-tags">
         <span class="comp-tag">Agile / Scrum</span>
         <span class="comp-tag">MS DevOps</span>
         <span class="comp-tag">Jira</span>
-        <span class="comp-tag">Risk Mgmt</span>
+        <span class="comp-tag">Risk Management</span>
+        <span class="comp-tag">Milestone Tracking</span>
       </div>
     </div>
     <div class="comp-card">
-      <div class="comp-icon">🤝</div>
+      <div class="comp-num">04</div>
       <div class="comp-title">Stakeholder Engagement</div>
-      <p style="font-size:13px;color:var(--muted);line-height:1.65">Workshop facilitation, executive-level presentations, translating complex technical concepts for non-technical audiences across C-suite and government stakeholders.</p>
+      <p class="comp-desc">Workshop facilitation, executive-level presentations, and translating complex data findings for non-technical audiences — across C-suite, government, and cross-cultural teams.</p>
       <div class="comp-tags">
         <span class="comp-tag">Facilitation</span>
-        <span class="comp-tag">Presentations</span>
-        <span class="comp-tag">Client Mgmt</span>
+        <span class="comp-tag">Executive Reporting</span>
+        <span class="comp-tag">Client Management</span>
+        <span class="comp-tag">Plain Language</span>
       </div>
     </div>
     <div class="comp-card">
-      <div class="comp-icon">🗄️</div>
-      <div class="comp-title">Data Management</div>
-      <p style="font-size:13px;color:var(--muted);line-height:1.65">Relational database design, ERD development, normalization, and data governance. Applied SHA-256 anonymization for patient data in a government health context.</p>
+      <div class="comp-num">05</div>
+      <div class="comp-title">Data Management &amp; Governance</div>
+      <p class="comp-desc">Relational database design, ERD development, normalization, and data governance. Applied SHA-256 patient anonymization in a government health context — production-grade thinking in academic work.</p>
       <div class="comp-tags">
         <span class="comp-tag">MySQL</span>
         <span class="comp-tag">NoSQL</span>
         <span class="comp-tag">ERD</span>
         <span class="comp-tag">Data Governance</span>
+        <span class="comp-tag">Anonymization</span>
       </div>
     </div>
     <div class="comp-card">
-      <div class="comp-icon">🧠</div>
+      <div class="comp-num">06</div>
       <div class="comp-title">Machine Learning Foundations</div>
-      <p style="font-size:13px;color:var(--muted);line-height:1.65">Linear regression, classification, clustering, and feature engineering. Applied in academic and real-world healthcare projects using Python and cloud platforms.</p>
+      <p class="comp-desc">Classification, regression, clustering, and feature engineering. Applied CRISP-DM methodology across real healthcare data, with working knowledge of model evaluation and imbalanced datasets.</p>
       <div class="comp-tags">
-        <span class="comp-tag">Regression</span>
         <span class="comp-tag">Classification</span>
+        <span class="comp-tag">Regression</span>
         <span class="comp-tag">CRISP-DM</span>
-        <span class="comp-tag">Cloud ML</span>
+        <span class="comp-tag">Feature Engineering</span>
+        <span class="comp-tag">scikit-learn</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── EXPERIENCE ────────────────────────────────────────────────────────── -->
+<!-- EXPERIENCE -->
 <section id="experience">
-  <div class="section-label">Professional Experience</div>
-  <h2 class="section-title">Where I've<br>Delivered Value</h2>
-  <div class="section-rule"></div>
+  <div class="sec-eyebrow">Professional Experience</div>
+  <h2 class="sec-title">Where I've<br>Delivered Value</h2>
+  <div class="sec-rule"></div>
   <div class="timeline reveal">
 
-    <!-- GNB -->
     <div class="tl-item">
       <div class="tl-dot"></div>
-      <div class="tl-header">
-        <div class="tl-date">Fall 2025 · Remote</div>
-        <div class="tl-title">Data Analyst Intern</div>
-        <div class="tl-org">Government of New Brunswick — Department of Health</div>
-        <div class="tl-badge">🏛 GNB · Future NB Program</div>
-      </div>
+      <div class="tl-date">Fall 2025</div>
+      <div class="tl-title">Data Analyst Intern</div>
+      <div class="tl-org">Government of New Brunswick — Department of Health</div>
+      <div class="tl-badge">GNB · Future NB Program</div>
       <p class="tl-desc">Selected for a competitive provincial internship within GNB's Health department. Delivered structured data analysis and stakeholder reporting in a fully Agile environment using Microsoft DevOps — working directly inside GNB's IT governance and documentation standards.</p>
       <div class="tl-bullets">
-        <div class="tl-bullet">Analysed complex health datasets to extract actionable insights, producing structured stakeholder reports supporting evidence-based policy decisions.</div>
-        <div class="tl-bullet">Designed and implemented maintainable data structures to organize new and existing health data, ensuring long-term usability and accuracy.</div>
-        <div class="tl-bullet">Communicated findings in plain language to non-technical decision-makers, bridging the gap between data and policy.</div>
-        <div class="tl-bullet">Completed all deliverables within Agile Sprint cycles using Microsoft DevOps, aligned to GNB IT governance and documentation standards.</div>
+        <div class="tl-bullet">Analysed complex government health datasets to extract actionable insights supporting evidence-based policy decisions.</div>
+        <div class="tl-bullet">Designed and implemented maintainable data structures to organize health data for long-term usability and accuracy.</div>
+        <div class="tl-bullet">Communicated findings to non-technical decision-makers, bridging the gap between data outputs and policy.</div>
+        <div class="tl-bullet">Completed all deliverables within Agile Sprint cycles using Microsoft DevOps, aligned to GNB IT governance standards.</div>
       </div>
     </div>
 
-    <!-- Huawei -->
     <div class="tl-item">
-      <div class="tl-dot steel"></div>
-      <div class="tl-header">
-        <div class="tl-date">September 2019 – December 2024 · 5 Years</div>
-        <div class="tl-title">Enterprise Solution Technical Manager</div>
-        <div class="tl-org">Huawei Technologies</div>
-        <div class="tl-badge">🌐 Fortune Global 500</div>
-      </div>
-      <p class="tl-desc">Served as the primary business-technical interface for enterprise clients across the ICT portfolio, owning the full solution lifecycle — from market analysis and requirements elicitation through to project delivery and post-implementation support.</p>
+      <div class="tl-dot secondary"></div>
+      <div class="tl-date">September 2019 – December 2024 · 5 Years</div>
+      <div class="tl-title">Enterprise Solution Technical Manager</div>
+      <div class="tl-org">Huawei Technologies</div>
+      <div class="tl-badge">Fortune Global 500</div>
+      <p class="tl-desc">Primary business-technical interface for enterprise clients across the ICT portfolio, owning the full solution lifecycle — from market analysis and requirements elicitation through to delivery and post-implementation support.</p>
       <div class="tl-bullets">
-        <div class="tl-bullet">Led client-facing requirements elicitation sessions — mapping current-state business processes and translating stakeholder needs into functional specifications for solution design teams.</div>
-        <div class="tl-bullet">Developed and presented solution proposals and business cases to C-suite and technical stakeholders, adapting communication depth to diverse audiences across multiple sectors.</div>
-        <div class="tl-bullet">Acted as accountable delivery lead — coordinating internal project teams, tracking milestones, managing risks, and serving as trusted client liaison to ensure on-time, on-scope delivery.</div>
-        <div class="tl-bullet">Performed risk assessments on order deliverability across the global supply chain, identifying constraints and implementing mitigation strategies to protect customer commitments.</div>
-        <div class="tl-bullet">Operated within enterprise IT governance, risk management, and data-handling frameworks — responsible use of client information at Fortune 500 scale.</div>
-        <div class="tl-bullet">Mentored incoming analysts and account managers, sharing best practices in requirements documentation, client communication, and solution lifecycle management.</div>
+        <div class="tl-bullet">Led client-facing requirements elicitation, mapping current-state business processes and translating stakeholder needs into functional specifications.</div>
+        <div class="tl-bullet">Developed and presented solution proposals and business cases to C-suite and technical stakeholders across multiple sectors.</div>
+        <div class="tl-bullet">Coordinated internal project teams, tracked milestones, managed risks, and served as trusted client liaison to ensure on-time, on-scope delivery.</div>
+        <div class="tl-bullet">Performed global supply chain risk assessments, identifying constraints and implementing mitigation strategies.</div>
+        <div class="tl-bullet">Mentored incoming analysts and account managers in requirements documentation, client communication, and solution lifecycle management.</div>
       </div>
     </div>
 
-    <!-- Study & Succeed -->
     <div class="tl-item">
       <div class="tl-dot"></div>
-      <div class="tl-header">
-        <div class="tl-date">May 2025 – August 2025</div>
-        <div class="tl-title">Selected Program Participant</div>
-        <div class="tl-org">Study and Succeed in NB — Immigration NB / Opportunities NB</div>
-        <div class="tl-badge">🍁 1 of 100 NB International Students Selected</div>
-      </div>
-      <p class="tl-desc">Competitively selected from across New Brunswick as one of 100 international students for a four-month provincial professional development program covering pre-employment training, intercultural competency, immigration pathways, and mentorship. Rated "excellent" by program assessors.</p>
+      <div class="tl-date">May 2025 – August 2025</div>
+      <div class="tl-title">Selected Program Participant</div>
+      <div class="tl-org">Study and Succeed in NB — Immigration NB / Opportunities NB</div>
+      <div class="tl-badge">1 of 100 NB International Students Selected</div>
+      <p class="tl-desc">Competitively selected from across New Brunswick for a four-month provincial professional development program covering pre-employment training, intercultural competency, immigration pathways, and mentorship. Rated "excellent" by program assessors.</p>
     </div>
 
-    <!-- Shelter Movers -->
     <div class="tl-item">
-      <div class="tl-dot steel"></div>
-      <div class="tl-header">
-        <div class="tl-date">February 2025 – Present · Moncton, NB</div>
-        <div class="tl-title">Volunteer Coordinator</div>
-        <div class="tl-org">Shelter Movers New Brunswick</div>
-      </div>
-      <p class="tl-desc">Collaborate with multi-disciplinary volunteer teams to coordinate logistics under strict time constraints — demonstrating accountability, precision, and composure in high-pressure environments.</p>
+      <div class="tl-dot secondary"></div>
+      <div class="tl-date">February 2025 – Present</div>
+      <div class="tl-title">Volunteer Coordinator</div>
+      <div class="tl-org">Shelter Movers New Brunswick</div>
+      <p class="tl-desc">Coordinate multi-disciplinary volunteer logistics under strict time constraints — demonstrating accountability, precision, and composure in high-pressure community environments.</p>
     </div>
 
   </div>
 </section>
 
-<!-- ── PROJECTS ──────────────────────────────────────────────────────────── -->
+<!-- PROJECTS -->
 <section id="projects">
-  <div class="section-label">Portfolio Projects</div>
-  <h2 class="section-title">Proof of<br>BA Methodology</h2>
-  <p class="section-sub">Real-world business analysis projects applying CRISP-DM, statistical modelling, stakeholder reporting, and full SDLC thinking.</p>
+  <div class="proj-intro reveal">
+    <div>
+      <div class="sec-eyebrow">Portfolio Projects</div>
+      <h2 class="sec-title">Analysis That<br>Creates Value</h2>
+      <div class="sec-rule" style="margin-bottom:0"></div>
+    </div>
+    <div class="proj-intro-right">
+      Each project follows a structured methodology from business problem definition through data analysis to stakeholder recommendations — the same approach I apply in professional settings. These aren't exercises; they're proof of end-to-end analytical thinking.
+    </div>
+  </div>
+
   <div class="proj-grid reveal">
 
-    <!-- DMC -->
     <div class="proj-card">
-      <div class="proj-header">
-        <div class="proj-num">// Project 01 · Featured</div>
-        <div class="proj-title">DMC Heart Institute — Cardiac Data Analysis</div>
-        <div class="proj-org">NBCC · DECI1021A &amp; DECI1022A · 2025</div>
+      <div class="proj-label">Featured Project</div>
+      <div class="proj-title">DMC Heart Institute — Cardiac Patient Data Analysis</div>
+      <div class="proj-org">NBCC · DECI1021A &amp; DECI1022A · 2025</div>
+      <p class="proj-desc">End-to-end business analysis and data science case study applying the full CRISP-DM framework to 15,757 cardiac patient admissions (April 2017 – March 2019). From business problem definition and stakeholder mapping through statistical modelling, database design, visualization, and executive-ready recommendations.</p>
+      <div class="proj-outcomes">
+        <div class="proj-outcomes-title">Key Outcomes</div>
+        <div class="proj-outcome">Identified Pulmonary Embolism (+2.62 days), CKD (+1.59 days), and VT (+1.58 days) as strongest predictors of extended hospital stays via multivariate regression.</div>
+        <div class="proj-outcome">Designed normalized MySQL database (4 tables, ERD) with SHA-256 patient anonymization — production-grade data governance.</div>
+        <div class="proj-outcome">Recommended ICU pathway and pre-admission screening protocols, targeting an estimated 5% OPEX reduction.</div>
+        <div class="proj-outcome">Delivered stakeholder reports and Power BI dashboards for both technical and non-technical audiences.</div>
       </div>
-      <div class="proj-body">
-        <p class="proj-desc">End-to-end BA case study applying the full CRISP-DM framework to 15,757 cardiac patient admissions (April 2017 – March 2019). From business problem definition and stakeholder analysis through to statistical modelling, database design, visualization, and executive-ready recommendations.</p>
-        <div class="proj-highlights">
-          <div class="proj-hl">Identified Pulmonary Embolism (+2.62 days LOS), CKD (+1.59 days), and VT (+1.58 days) as the strongest clinical predictors of extended hospital stays via bivariate and multivariate regression.</div>
-          <div class="proj-hl">Designed normalized MySQL database (4 tables, ERD) with SHA-256 patient anonymization — production-grade data governance applied to academic project.</div>
-          <div class="proj-hl">Produced stakeholder-ready reports and Power BI dashboards for both technical and non-technical audiences; recommended ICU pathway and pre-admission screening protocols targeting 5% OPEX reduction.</div>
-          <div class="proj-hl">Managed full project lifecycle in Microsoft DevOps Agile environment as team lead alongside academic partner.</div>
-        </div>
-        <div class="proj-pills">
-          <span class="proj-pill">CRISP-DM</span>
-          <span class="proj-pill">Python · Pandas</span>
-          <span class="proj-pill">SQL · MySQL</span>
-          <span class="proj-pill">Power BI</span>
-          <span class="proj-pill">ERD</span>
-          <span class="proj-pill">Regression</span>
-          <span class="proj-pill">MS DevOps</span>
-          <span class="proj-pill">Stakeholder Reporting</span>
-        </div>
+      <div class="proj-pills">
+        <span class="proj-pill">CRISP-DM</span>
+        <span class="proj-pill">Python · Pandas · NumPy</span>
+        <span class="proj-pill">Matplotlib</span>
+        <span class="proj-pill">SQL · MySQL</span>
+        <span class="proj-pill">Power BI</span>
+        <span class="proj-pill">ERD</span>
+        <span class="proj-pill">Regression Analysis</span>
+        <span class="proj-pill">MS DevOps</span>
       </div>
       <div class="proj-footer">
-        <span class="proj-link">Healthcare · Business Analysis · Data Science →</span>
+        <span class="proj-type">Healthcare · BA · Data Science</span>
+        <a href="https://github.com/tafimuriri" target="_blank" class="proj-link">View on GitHub →</a>
       </div>
     </div>
 
-    <!-- GNB Health -->
     <div class="proj-card">
-      <div class="proj-header">
-        <div class="proj-num">// Project 02</div>
-        <div class="proj-title">GNB Health — Data Analytics Internship</div>
-        <div class="proj-org">Government of New Brunswick · Fall 2025</div>
+      <div class="proj-label">Government Internship</div>
+      <div class="proj-title">GNB Health — Data Analytics Internship</div>
+      <div class="proj-org">Government of New Brunswick · Fall 2025</div>
+      <p class="proj-desc">Applied data analytics within the Government of New Brunswick's Health department. Delivered structured data solutions and stakeholder reports within a fully Agile environment, operating under GNB's IT governance and documentation standards.</p>
+      <div class="proj-outcomes">
+        <div class="proj-outcomes-title">Key Outcomes</div>
+        <div class="proj-outcome">Analysed real government health datasets to produce actionable insights supporting policy decisions.</div>
+        <div class="proj-outcome">Designed maintainable data structures ensuring long-term usability across departmental systems.</div>
+        <div class="proj-outcome">Delivered all work within Sprint cycles using Microsoft DevOps — direct GNB IT workflow experience.</div>
       </div>
-      <div class="proj-body">
-        <p class="proj-desc">Applied data analytics within the Government of New Brunswick's Health department. Delivered structured data solutions and stakeholder reports within a fully Agile environment, operating under GNB's IT governance and documentation standards.</p>
-        <div class="proj-highlights">
-          <div class="proj-hl">Analysed real government health datasets to produce actionable insights for policy decision-making.</div>
-          <div class="proj-hl">Designed maintainable data structures ensuring long-term data usability and accuracy across departmental systems.</div>
-          <div class="proj-hl">Delivered all work within Sprint cycles using Microsoft DevOps — direct GNB IT workflow experience.</div>
-          <div class="proj-hl">Communicated findings to non-technical government stakeholders in clear, accessible formats.</div>
-        </div>
-        <div class="proj-pills">
-          <span class="proj-pill">Microsoft DevOps</span>
-          <span class="proj-pill">Agile / Scrum</span>
-          <span class="proj-pill">Health Data</span>
-          <span class="proj-pill">Stakeholder Reports</span>
-          <span class="proj-pill">GNB IT Standards</span>
-        </div>
+      <div class="proj-pills">
+        <span class="proj-pill">Microsoft DevOps</span>
+        <span class="proj-pill">Agile / Scrum</span>
+        <span class="proj-pill">Health Data</span>
+        <span class="proj-pill">Stakeholder Reporting</span>
+        <span class="proj-pill">GNB IT Standards</span>
       </div>
       <div class="proj-footer">
-        <span class="proj-link">Government · Health Analytics · Agile →</span>
+        <span class="proj-type">Government · Health Analytics · Agile</span>
       </div>
     </div>
 
-    <!-- Android App -->
     <div class="proj-card">
-      <div class="proj-header">
-        <div class="proj-num">// Project 03</div>
-        <div class="proj-title">Tourist Guide Android App</div>
-        <div class="proj-org">Liaoning University of Technology · Bachelor Thesis · 2018</div>
+      <div class="proj-label">Bachelor Thesis</div>
+      <div class="proj-title">Tourist Guide Android Application</div>
+      <div class="proj-org">Liaoning University of Technology · Computer Science Thesis · 2018</div>
+      <p class="proj-desc">Full-stack Android application for Zimbabwe tourism, built as Bachelor thesis. Demonstrates full SDLC thinking — from system requirements analysis and use case documentation through to database design, implementation, and testing.</p>
+      <div class="proj-outcomes">
+        <div class="proj-outcomes-title">Key Outcomes</div>
+        <div class="proj-outcome">Conducted system requirements analysis, produced use case documentation, and designed relational database with full ERD.</div>
+        <div class="proj-outcome">Developed Android application (Java), REST API backend (PHP), MySQL database, and admin management panel.</div>
+        <div class="proj-outcome">Features: user registration, location search (restaurants, attractions, accommodation), navigation, and admin panel.</div>
       </div>
-      <div class="proj-body">
-        <p class="proj-desc">Full-stack Android application for Zimbabwe tourism, built as Bachelor thesis. Demonstrates full SDLC thinking — from system requirements analysis and use case documentation through to database design, implementation, and testing.</p>
-        <div class="proj-highlights">
-          <div class="proj-hl">Conducted system requirements analysis, produced use case documentation, and designed relational database with full ERD.</div>
-          <div class="proj-hl">Developed Android application (Java), REST API backend (PHP), MySQL database, and admin management panel.</div>
-          <div class="proj-hl">Features: user registration/login, location search (restaurants, attractions, accommodation), travel tips, navigation, and admin panel.</div>
-        </div>
-        <div class="proj-pills">
-          <span class="proj-pill">Java · Android</span>
-          <span class="proj-pill">PHP</span>
-          <span class="proj-pill">MySQL</span>
-          <span class="proj-pill">ERD</span>
-          <span class="proj-pill">Full SDLC</span>
-          <span class="proj-pill">HTML · CSS</span>
-        </div>
+      <div class="proj-pills">
+        <span class="proj-pill">Java · Android</span>
+        <span class="proj-pill">PHP · REST API</span>
+        <span class="proj-pill">MySQL · ERD</span>
+        <span class="proj-pill">Full SDLC</span>
+        <span class="proj-pill">System Requirements</span>
       </div>
       <div class="proj-footer">
-        <span class="proj-link">Full-Stack · System Design · Mobile →</span>
+        <span class="proj-type">Full-Stack · System Design · Mobile</span>
+        <a href="https://github.com/tafimuriri" target="_blank" class="proj-link">View on GitHub →</a>
       </div>
     </div>
 
   </div>
 </section>
 
-<!-- ── SKILLS ────────────────────────────────────────────────────────────── -->
+<!-- SKILLS -->
 <section id="skills">
-  <div class="section-label">Technical Proficiency</div>
-  <h2 class="section-title">Tools &amp;<br>Technologies</h2>
-  <div class="section-rule"></div>
-  <div class="skills-grid reveal">
-    <div>
-      <div class="skill-row"><div class="skill-head"><span class="skill-name">Requirements Analysis &amp; Documentation</span><span class="skill-pct">90%</span></div><div class="skill-track"><div class="skill-fill" style="width:90%"></div></div></div>
-      <div class="skill-row"><div class="skill-head"><span class="skill-name">Stakeholder Management &amp; Communication</span><span class="skill-pct">92%</span></div><div class="skill-track"><div class="skill-fill" style="width:92%"></div></div></div>
-      <div class="skill-row"><div class="skill-head"><span class="skill-name">Python (pandas, NumPy, Matplotlib)</span><span class="skill-pct">78%</span></div><div class="skill-track"><div class="skill-fill" style="width:78%"></div></div></div>
-      <div class="skill-row"><div class="skill-head"><span class="skill-name">SQL / MySQL</span><span class="skill-pct">80%</span></div><div class="skill-track"><div class="skill-fill" style="width:80%"></div></div></div>
-      <div class="skill-row"><div class="skill-head"><span class="skill-name">Power BI / Data Visualization</span><span class="skill-pct">75%</span></div><div class="skill-track"><div class="skill-fill" style="width:75%"></div></div></div>
-      <div class="skill-row"><div class="skill-head"><span class="skill-name">Advanced Excel</span><span class="skill-pct">85%</span></div><div class="skill-track"><div class="skill-fill" style="width:85%"></div></div></div>
+  <div class="sec-eyebrow">Technical Proficiency</div>
+  <h2 class="sec-title">Tools &amp;<br>Technologies</h2>
+  <div class="sec-rule"></div>
+  <div class="skills-layout reveal">
+    <div class="skills-intro">
+      <p>My toolkit spans the full analytics lifecycle — from data extraction and cleaning to modelling, visualization, and stakeholder communication.</p>
+      <p>Built through 5+ years of enterprise delivery at Huawei, a government health analytics internship, and intensive post-graduate training at NBCC.</p>
+      <div class="skills-note">
+        Currently deepening expertise in machine learning and predictive analytics through NBCC's Advanced Analytics program, with a capstone project launching Spring 2026.
+      </div>
     </div>
-    <div>
-      <div class="skill-row"><div class="skill-head"><span class="skill-name">Agile / Scrum &amp; Microsoft DevOps</span><span class="skill-pct">82%</span></div><div class="skill-track"><div class="skill-fill" style="width:82%"></div></div></div>
-      <div class="skill-row"><div class="skill-head"><span class="skill-name">Business Case Development</span><span class="skill-pct">88%</span></div><div class="skill-track"><div class="skill-fill" style="width:88%"></div></div></div>
-      <div class="skill-row"><div class="skill-head"><span class="skill-name">Process Mapping (As-Is / To-Be)</span><span class="skill-pct">85%</span></div><div class="skill-track"><div class="skill-fill" style="width:85%"></div></div></div>
-      <div class="skill-row"><div class="skill-head"><span class="skill-name">R Language (Statistical Analysis)</span><span class="skill-pct">70%</span></div><div class="skill-track"><div class="skill-fill" style="width:70%"></div></div></div>
-      <div class="skill-row"><div class="skill-head"><span class="skill-name">Risk Assessment &amp; Mitigation</span><span class="skill-pct">88%</span></div><div class="skill-track"><div class="skill-fill" style="width:88%"></div></div></div>
-      <div class="skill-row"><div class="skill-head"><span class="skill-name">Presentation &amp; Workshop Facilitation</span><span class="skill-pct">90%</span></div><div class="skill-track"><div class="skill-fill" style="width:90%"></div></div></div>
+    <div class="skills-cols">
+      <div>
+        <div class="skill-group">
+          <div class="skill-group-title">Data Analysis</div>
+          <div class="skill-item">Python (Pandas, NumPy, Matplotlib)</div>
+          <div class="skill-item">SQL &amp; MySQL</div>
+          <div class="skill-item">R (Statistical Analysis)</div>
+          <div class="skill-item">Advanced Excel (PivotTables, VLOOKUP)</div>
+          <div class="skill-item">Statistical Modelling &amp; Regression</div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-title">Visualization &amp; Reporting</div>
+          <div class="skill-item">Power BI (Dashboards, DAX)</div>
+          <div class="skill-item">Matplotlib &amp; Seaborn</div>
+          <div class="skill-item">Stakeholder Reports (Executive Level)</div>
+          <div class="skill-item">Data Storytelling</div>
+        </div>
+      </div>
+      <div>
+        <div class="skill-group">
+          <div class="skill-group-title">Business Analysis</div>
+          <div class="skill-item">Requirements Elicitation &amp; Documentation</div>
+          <div class="skill-item">Process Mapping (As-Is / To-Be)</div>
+          <div class="skill-item">Business Case Development</div>
+          <div class="skill-item">CRISP-DM &amp; BABOK Frameworks</div>
+          <div class="skill-item">Gap Analysis &amp; BRD / FRD Writing</div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-title">Delivery &amp; Collaboration</div>
+          <div class="skill-item">Agile / Scrum Methodology</div>
+          <div class="skill-item">Microsoft DevOps (GNB Environment)</div>
+          <div class="skill-item">Risk Assessment &amp; Mitigation</div>
+          <div class="skill-item">Workshop Facilitation</div>
+          <div class="skill-item">Cross-cultural Stakeholder Management</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ── EDUCATION ─────────────────────────────────────────────────────────── -->
+<!-- EDUCATION -->
 <section id="education">
-  <div class="section-label">Education</div>
-  <h2 class="section-title">Academic<br>Foundation</h2>
-  <div class="section-rule"></div>
+  <div class="sec-eyebrow">Education</div>
+  <h2 class="sec-title">Academic<br>Foundation</h2>
+  <div class="sec-rule"></div>
   <div class="edu-grid reveal">
     <div class="edu-card">
-      <div class="edu-year">2025 – PRESENT</div>
+      <div class="edu-year">2025 – Present</div>
       <div class="edu-degree">Post-Graduate Diploma — IT Business &amp; Advanced Analytics</div>
-      <div class="edu-school">New Brunswick Community College (NBCC) · Moncton, Canada</div>
+      <div class="edu-school">New Brunswick Community College (NBCC)</div>
       <div class="edu-detail">Business Analysis for Data Projects I &amp; II · Statistical Analysis · Machine Learning I–III · Python I–IV · Power BI · Data Management · Cloud Foundations · Data Ethics · Capstone (Spring 2026)</div>
     </div>
     <div class="edu-card">
       <div class="edu-year">2014 – 2018</div>
       <div class="edu-degree">Bachelor of Engineering — Computer Science &amp; Technology</div>
       <div class="edu-school">Liaoning University of Technology · Liaoning, China</div>
-      <div class="edu-detail">Web Development · Network Security · Database Technology · Java (Android) · Thesis: Tourist Attractions Guide App (Android, Java, MySQL)</div>
+      <div class="edu-detail">Web Development · Network Security · Database Technology · Java (Android) · Thesis: Tourist Attractions Guide App</div>
     </div>
     <div class="edu-card">
       <div class="edu-year">2008 – 2013</div>
@@ -848,27 +966,35 @@ footer{
   </div>
 </section>
 
-<!-- ── CERTIFICATIONS ────────────────────────────────────────────────────── -->
+<!-- CERTIFICATIONS -->
 <section id="certifications">
-  <div class="section-label">Certifications &amp; Recognition</div>
-  <h2 class="section-title">Credentials &amp;<br>Awards</h2>
-  <div class="section-rule"></div>
+  <div class="sec-eyebrow">Certifications &amp; Recognition</div>
+  <h2 class="sec-title">Credentials &amp;<br>Awards</h2>
+  <div class="sec-rule"></div>
   <div class="cert-grid reveal">
     <div class="cert-card">
       <div class="cert-icon">🍁</div>
-      <div><div class="cert-name">Study and Succeed in NB — Completion Certificate</div><div class="cert-issuer">Immigration NB · Signed by Assistant Deputy Minister</div><div class="cert-date">AUGUST 2025</div></div>
+      <div><div class="cert-name">Study and Succeed in NB — Completion Certificate</div><div class="cert-issuer">Immigration NB · Signed by Assistant Deputy Minister</div><div class="cert-date">August 2025</div></div>
     </div>
     <div class="cert-card">
       <div class="cert-icon">🏅</div>
-      <div><div class="cert-name">Certificate of Leadership — Peer Mentorship Program</div><div class="cert-issuer">New Brunswick Community College (NBCC)</div><div class="cert-date">FALL 2025</div></div>
+      <div><div class="cert-name">Certificate of Leadership — Peer Mentorship Program</div><div class="cert-issuer">New Brunswick Community College (NBCC)</div><div class="cert-date">Fall 2025</div></div>
     </div>
     <div class="cert-card">
       <div class="cert-icon">📣</div>
-      <div><div class="cert-name">Student Ambassador</div><div class="cert-issuer">NBCC · The Ambassador Platform · Rated "Excellent"</div><div class="cert-date">JUNE 2025 – PRESENT</div></div>
+      <div><div class="cert-name">Student Ambassador — Rated "Excellent"</div><div class="cert-issuer">NBCC · The Ambassador Platform</div><div class="cert-date">June 2025 – Present</div></div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon">🏆</div>
+      <div><div class="cert-name">Development of Digital Economy Award</div><div class="cert-issuer">International Recognition · Huawei Technologies</div><div class="cert-date">During Huawei Tenure</div></div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-icon">📡</div>
+      <div><div class="cert-name">ICT Technical &amp; Sales Certification</div><div class="cert-issuer">Huawei Technologies</div><div class="cert-date">During Huawei Tenure</div></div>
     </div>
     <div class="cert-card">
       <div class="cert-icon">🎤</div>
-      <div><div class="cert-name">How to Speak Smarter When Put on the Spot</div><div class="cert-issuer">LinkedIn Learning · Professional Communication</div><div class="cert-date">APRIL 2025</div></div>
+      <div><div class="cert-name">How to Speak Smarter When Put on the Spot</div><div class="cert-issuer">LinkedIn Learning</div><div class="cert-date">April 2025</div></div>
     </div>
     <div class="cert-card">
       <div class="cert-icon">🌍</div>
@@ -882,85 +1008,56 @@ footer{
       <div class="cert-icon">⛰️</div>
       <div><div class="cert-name">Outward Bound Leadership Certificate</div><div class="cert-issuer">Outward Bound Zimbabwe</div><div class="cert-date">2013</div></div>
     </div>
-    <div class="cert-card">
-      <div class="cert-icon">🏆</div>
-      <div><div class="cert-name">Development of Digital Economy Award</div><div class="cert-issuer">International Recognition · Huawei Technologies</div><div class="cert-date">DURING HUAWEI TENURE</div></div>
-    </div>
-    <div class="cert-card">
-      <div class="cert-icon">📡</div>
-      <div><div class="cert-name">ICT Technical &amp; Sales Certification</div><div class="cert-issuer">Huawei Technologies</div><div class="cert-date">DURING HUAWEI TENURE</div></div>
-    </div>
   </div>
 </section>
 
-<!-- ── CONTACT ────────────────────────────────────────────────────────────── -->
+<!-- CONTACT -->
 <section id="contact">
   <div class="contact-inner reveal">
-    <div class="section-label">Get In Touch</div>
-    <h2 class="section-title">Let's Build<br>Something Together</h2>
-    <div class="section-rule"></div>
-    <p style="font-size:16px;color:var(--muted);line-height:1.8;margin-bottom:8px">
-      I'm actively seeking Senior Business Analyst roles in New Brunswick — particularly within GNB, SNB, and the broader Canadian public sector. I bring enterprise-grade rigour, direct GNB experience, and a genuine commitment to learning and contributing to high-performing teams.
-    </p>
-    <div class="contact-links">
-      <a href="mailto:t.muriri@live.co.uk" class="contact-link">
-        <span class="contact-link-icon">✉️</span>
-        t.muriri@live.co.uk
+    <div class="sec-eyebrow">Get In Touch</div>
+    <h2 class="sec-title">Let's Work<br>Together</h2>
+    <div class="sec-rule"></div>
+    <p>I'm actively seeking Business Analyst and Data Analyst roles — including remote opportunities across North America. I bring enterprise-grade rigour from 5+ years at Huawei, direct government analytics experience, and a genuine drive to contribute to high-performing teams.</p>
+    <div class="contact-grid">
+      <a href="mailto:t.muriri@live.co.uk" class="contact-item">
+        <span class="contact-icon">✉️</span>
+        <div><div class="contact-label">Email</div><div class="contact-value">t.muriri@live.co.uk</div></div>
       </a>
-      <a href="tel:+15066882429" class="contact-link">
-        <span class="contact-link-icon">📱</span>
-        +1 (506) 688-2429
+      <a href="tel:+15066882429" class="contact-item">
+        <span class="contact-icon">📱</span>
+        <div><div class="contact-label">Phone</div><div class="contact-value">+1 (506) 688-2429</div></div>
       </a>
-      <a href="https://www.linkedin.com/in/tafadzwamuriritirwa/" target="_blank" class="contact-link">
-        <span class="contact-link-icon">💼</span>
-        LinkedIn Profile
+      <a href="https://www.linkedin.com/in/tafadzwamuriritirwa/" target="_blank" class="contact-item">
+        <span class="contact-icon">💼</span>
+        <div><div class="contact-label">LinkedIn</div><div class="contact-value">tafadzwamuriritirwa</div></div>
       </a>
-      <a href="https://github.com/tafimuriri" target="_blank" class="contact-link">
-        <span class="contact-link-icon">🐙</span>
-        GitHub
+      <a href="https://github.com/tafimuriri" target="_blank" class="contact-item">
+        <span class="contact-icon">🐙</span>
+        <div><div class="contact-label">GitHub</div><div class="contact-value">tafimuriri</div></div>
       </a>
     </div>
   </div>
 </section>
 
-<!-- ── FOOTER ─────────────────────────────────────────────────────────────── -->
+<!-- FOOTER -->
 <footer>
-  <div class="footer-left">T.<span>M</span> — Tafadzwa Muriritirwa</div>
-  <div class="footer-right">Senior Business Analyst · Moncton, NB, Canada · Eligible to work in Canada</div>
+  <div class="footer-left">T.<em>M</em> — Tafadzwa Muriritirwa</div>
+  <div class="footer-right">Business Analyst · Data Analyst · Open to Remote · Eligible to work in Canada</div>
 </footer>
 
-<!-- ── SCRIPTS ────────────────────────────────────────────────────────────── -->
 <script>
-// Hamburger menu
 const hamburger = document.getElementById('hamburger');
 const navbar = document.getElementById('navbar');
 hamburger.addEventListener('click', () => navbar.classList.toggle('open'));
 
-// Scroll reveal
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
-}, { threshold: 0.12 });
+}, { threshold: 0.1 });
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-// Navbar scroll style
 window.addEventListener('scroll', () => {
-  navbar.style.padding = window.scrollY > 40 ? '12px 5%' : '18px 5%';
+  navbar.style.padding = window.scrollY > 40 ? '14px 6%' : '20px 6%';
 });
-
-// Animate skill bars on reveal
-const skillObs = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if(e.isIntersecting){
-      e.target.querySelectorAll('.skill-fill').forEach(bar => {
-        const w = bar.style.width;
-        bar.style.width = '0';
-        setTimeout(() => { bar.style.width = w; }, 100);
-      });
-    }
-  });
-}, { threshold: 0.2 });
-const skillSection = document.querySelector('#skills .skills-grid');
-if(skillSection) skillObs.observe(skillSection);
 </script>
 </body>
 </html>
