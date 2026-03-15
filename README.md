@@ -1,2 +1,2 @@
 # Portfolio
-Senior Business Analyst &amp; Data Analyst Portfolio
+Business Analyst &amp; Data Analyst Portfolio
